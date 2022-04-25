@@ -1,3 +1,52 @@
+//  new thing
+document.getElementById('button').addEventListener('click',loadBooks);
+
+
+function loadBooks(e){
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET','books.json',true);
+  xhr.onload = function(){
+    if(this.status === 200){
+       console.log(this.responseText);
+
+      const books = JSON.parse(this.responseText);
+
+      let output='';
+      books.forEach(function(book){
+        output +=
+        `<ul>
+        <li>ISBN: ${book.isbn}</li>
+        <li>Title: ${book.title}</li>
+        <li>Author: ${book.author}</li>
+        </ul>
+        <br>`;
+      });
+
+      /*const customers = JSON.parse(this.responseText);
+
+           let output = '';
+           customers.forEach(function(customer){
+             output += `
+            <ul>
+            <li>ID: ${customer.id}</li>
+            <li>Name: ${customer.name}</li>
+            <li>Company: ${customer.company}</li>
+            <li>Phone: ${customer.phone}</li>
+            </ul>
+            <br>
+            `;
+           });
+     */
+     
+
+      document.getElementById('output4').innerHTML = output;
+    }};
+  xhr.send();
+};
+
+
+
+// new thing
 class Book {
     constructor(title, author, isbn) {
       this.title = title;

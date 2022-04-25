@@ -1,0 +1,32 @@
+[
+    {
+        "title":"The Book of all Books",
+        "author":"Steve Smith",
+        "isbn":1
+    },
+    {
+        "title":"Only Book",
+        "author":"opo Dooe",
+        "isbn":2
+    },
+    {
+        "title":"Book with a cover",
+        "author":"John Doe",
+        "isbn":3
+    },
+    {
+        "title":"The Book 2 books",
+        "author":"Steve no",
+        "isbn":4
+    },
+    {
+        "title":"Only 3 Books",
+        "author":"oppo Dooe",
+        "isbn":5
+    },
+    {
+        "title":"Book with a cover",
+        "author":"tripl Doe",
+        "isbn":6
+    }
+]
